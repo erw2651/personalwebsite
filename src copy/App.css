@@ -1,0 +1,167 @@
+/* Overall layout styles */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2; /* Light gray background color similar to Windows 11 */
+    color: #000000; /* Black text color */
+    font-family: "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px; /* Base font size, equivalent to 100% */
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: rgba(255, 255, 255, 0.9); /* Blurry off-white background */
+    backdrop-filter: saturate(180%) blur(10px);
+}
+
+.app__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 44px; /* Use a variable for the header height */
+    padding: 10px 20px;
+    background-color: rgba(41, 41, 45, 0.9); /* Slightly transparent background for header */
+    backdrop-filter: saturate(180%) blur(10px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+}
+
+.app__headerTitle {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.app__nav ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin-right: 20px;
+}
+
+a {
+    color: #ffffff; /* White text color for links */
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+
+a:hover {
+    background-color: #eaeaea; /* Light gray background on hover */
+}
+
+.app__body {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.app__profile {
+    /* Styles for profile picture section on the left */
+    flex: 0.2;
+    background-color: white /* White background for profile section */
+
+}
+/* Media query for smaller screens (max-width: 768px) */
+@media (max-width: 768px) {
+    .app__body {
+        flex-direction: column; /* Stack sections vertically on smaller screens */
+    }
+
+    .app__profile,
+    .app__experience,
+    .app__skills,
+    .app__bio {
+        /* Reset flex-basis to auto so they take up full width on smaller screens */
+        flex: auto;
+        margin-bottom: 20px; /* Add some space between sections on smaller screens */
+    }
+}
+.app__profile img {
+    /* Styles for your profile picture */
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+
+}
+
+.app__content {
+    /* Styles for the right sidebar */
+    flex: 0.8;
+    display: flex;
+    flex-direction: column;
+}
+
+.app__about-me,
+.app__skills {
+    /* Common styles for the About Me and Skills sections */
+    background-color: #f9f9f9; /* Light gray background for sections */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.app__about-me h2,
+.app__skills h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+.app__experience h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+.app__experience {
+    /* Styles for the experience section */
+    margin-top: 20px;
+}
+
+.job {
+    /* Styles for each job banner */
+    background-color: #f2f2f2; /* Light gray background for the banner */
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle box shadow for the banner */
+}
+
+.job h3 {
+    /* Styles for the job title */
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.job p {
+    /* Styles for the job details */
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.job ul {
+    /* Styles for the list of job details */
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.job li {
+    /* Styles for each item in the list of job details */
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.app__footer {
+    padding: 10px;
+    /* Add your footer styles here if needed */
+}
